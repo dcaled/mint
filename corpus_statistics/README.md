@@ -1,6 +1,15 @@
 # MIND Corpus Statistics
 
-## Sentiment
+## Sentiment Metrics
+
+Metrics description:
+
+sentiment_ratio = number of sentiment words divided by the number of terms.
+
+positive (negative) ratio = number of positive (negative) terms divided by the number of terms.
+
+positive (negative) contrast = number of positive (negative) contrast divided by the number of sentiment terms.
+
 
 ### Headline
 
