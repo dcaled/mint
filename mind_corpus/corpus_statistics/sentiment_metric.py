@@ -165,7 +165,7 @@ class SentimentMetric(Metric):
     def compute_metric(self, text_as_list):
         """
         Returns the score of sentiment computed:
-        sentiment_ratio = number of sentiment words over divided by the number of terms.
+        sentiment_ratio = number of sentiment words divided by the number of terms.
         positive (negative) ratio = number of positive (negative) terms divided by the number of terms.
         positive (negative) contrast = number of positive (negative) contrast divided by the number of sentiment terms.
 
