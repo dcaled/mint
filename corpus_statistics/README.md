@@ -13,23 +13,30 @@ positive (negative) contrast = number of positive (negative) contrast divided by
 
 ### Headline
 
-| Metric            | Fact          |
-| ----------------- | ------------- |
-| sentiment_ratio   |	0.11 +/- 0.09 |
-| positive_ratio	  | 0.05 +/- 0.07 |
-| negative_ratio	  | 0.06 +/- 0.07 |
-| positive_contrast	| 0.01 +/- 0.06 |
-| negative_contrast	| 0.01 +/- 0.05 |
+| Metric            | Fact          | Opinion       |
+| ----------------- | ------------- | ------------- |
+| sentiment_ratio   |	0.11 +/- 0.09 | 0.13 +/- 0.15 |
+| positive_ratio	  | 0.05 +/- 0.07 | 0.06 +/- 0.11 |
+| negative_ratio	  | 0.06 +/- 0.07 | 0.06 +/- 0.11 |
+| positive_contrast	| 0.01 +/- 0.06 | 0.01 +/- 0.06 |
+| negative_contrast	| 0.01 +/- 0.05 | 0.00 +/- 0.04 |
 
 ### Body Text
 
-| Metric            | Fact          |
-| ----------------- | ------------- |
-| sentiment_ratio   |	0.08 +/- 0.02 |
-| positive_ratio	  | 0.04 +/- 0.02 |
-| negative_ratio	  | 0.04 +/- 0.02 |
-| positive_contrast	| 0.02 +/- 0.03 |
-| negative_contrast	| 0.01 +/- 0.02 |
+| Metric            | Fact          | Opinion       |
+| ----------------- | ------------- | ------------- |
+| sentiment_ratio   |	0.08 +/- 0.02 | 0.11 +/- 0.02 |
+| positive_ratio	  | 0.04 +/- 0.02 | 0.06 +/- 0.02 |
+| negative_ratio	  | 0.04 +/- 0.02 | 0.05 +/- 0.02 |
+| positive_contrast	| 0.02 +/- 0.03 | 0.02 +/- 0.02 |
+| negative_contrast	| 0.01 +/- 0.02 | 0.01 +/- 0.02 |
+
+
+
+
+
+
+
 
 
 
