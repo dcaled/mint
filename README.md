@@ -1,6 +1,25 @@
-# MIND - Mainstream and Independent News Documents Corpus
+# MIND Corpus
+Danielle Caled and Paula Carvalho and Mário J. Silva. 2021. MIND - Mainstream and Independent News Documents Corpus
 
-https://arxiv.org/abs/2108.06249
+Paper: https://arxiv.org/abs/2108.06249
+
+We make MIND corpus metadata available in this repository. 
+To access the news articles' headline and body text, we implement a series of scrappers, customized according to the source of the article.
+
+
+## Instructions
+
+### Download metadata
+
+Metadata are available [here](https://github.com/dcaled/mind/blob/master/mind_corpus/corpus/mind_metadata.json).
+
+### Download text 
+
+Under construction...
+
+
+## Disclaimer
+MIND's news articles are downloaded directly from their source URLs through the scrappers provided in this repository. Since source pages are dynamic, their content may not be available or may be updated at the time of download.
 
 
 ## Citation
