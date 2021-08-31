@@ -4,7 +4,7 @@ import nltk
 from nltk.tokenize import RegexpTokenizer
 
 
-class Article:
+class PreprocessedArticle:
     def __init__(self, headline, body, n_grams=1):
         self.headline = headline.strip()
         self.body = body.strip()

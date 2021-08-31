@@ -4,7 +4,7 @@ import statistics
 from tqdm import tqdm
 
 from mind_corpus import constants
-from article import Article
+from preprocessed_article import PreprocessedArticle
 from sentiment_metric import SentimentMetric
 
 
@@ -25,7 +25,7 @@ def load_from_path(subset_path):
             # Load json file.
             filepath = '{}/{}/{}'.format(subset_path, source, filename)
             data = load_article(filepath)
-            article = Article(headline=data["title"], body=data['text'])
+            article = PreprocessedArticle(headline=data["title"], body=data['text'])
             subset += [article]
     return subset
 
