@@ -22,8 +22,12 @@ class CrawledArticle:
     def print(self):
         pprint(self.__dict__)
 
-    def save_article(self, path, filename):
-        filepath = '{}{}/{}.json'.format(path, self.source, filename)
+    def save_article(self, path):
+
+        if not os.path.exists('{}/{}/{}'.format(path, self.category, self.source)):
+            os.makedirs('{}/{}/{}'.format(path, self.category, self.source))
+
+        filepath = '{}/{}/{}/{}'.format(path, self.category, self.source, self.filename)
         if not os.path.exists(filepath):
             with open(filepath, 'w', encoding='utf-8') as file:
                 json.dump(self.__dict__, file, indent=4, sort_keys=True)
