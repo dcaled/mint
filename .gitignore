@@ -136,3 +136,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Corpus files
+/mind_corpus/corpus*/fact
+/mind_corpus/corpus*/opinion
+/mind_corpus/corpus*/entertainment
+/mind_corpus/corpus*/satire
+/mind_corpus/corpus*/conspiracy
