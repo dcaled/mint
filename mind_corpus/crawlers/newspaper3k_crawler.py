@@ -20,15 +20,15 @@ def save_article(path, metadata, article):
         source=metadata["source"],
         url=metadata["url"],
         publish_date=metadata["publish_date"],
-        headline=article.title,
-        body_text=article.text,
+        headline=article.title.strip(),
+        body_text=article.text.strip(),
         authors=metadata["authors"],
         description=metadata["description"],
         tags=metadata["tags"],
         top_image=metadata["top_image"],
         movies=metadata["movies"]
     )
-    crawled_article.print()
+    # crawled_article.print()
     crawled_article.save_article(path)
 
 
@@ -41,11 +41,11 @@ def crawl_url(path, metadata):
         article = Article(metadata["url"], config=n3k_config)
         article.download()
         article.parse()
-        if not article.title:
+        if not article.title.strip():
             print("title")
             sys.exit()
             pass
-        elif not article.text:
+        elif not article.text.strip():
             err = "\nFailed to download {}. No body text found.".format(metadata["url"])
             print(err)
             logging.exception('Exception: {}'.format(err))
@@ -71,8 +71,8 @@ def main():
     print()
     crawler_status = {"success": 0, "fail": 0}
 
-    for entry in tqdm(mind_metadata[18000:19029]):
-        if entry["source"] in ["inimigopublico"]:
+    for entry in tqdm(mind_metadata[15000:18000]):
+        if entry["source"] in ["vidas"]:
             current_status = crawl_url(const.fp_mind_corpus, entry)
             if current_status:
                 crawler_status["success"] += 1
