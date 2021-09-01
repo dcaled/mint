@@ -23,7 +23,6 @@ class CrawledArticle:
         pprint(self.__dict__)
 
     def save_article(self, path):
-
         if not os.path.exists('{}/{}/{}'.format(path, self.category, self.source)):
             os.makedirs('{}/{}/{}'.format(path, self.category, self.source))
 
