@@ -1,9 +1,16 @@
 import json
 import logging
 import sys
+from tqdm import tqdm
 
-from newspaper import Article, Config
+from newspaper import Article, Config, ArticleException
+import mind_corpus.constants as const
 from crawled_article import CrawledArticle
+
+log_path = '{}/newspaper3k.log'.format(const.fp_logs)
+logging.basicConfig(filename=log_path, level=logging.DEBUG,
+                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger = logging.getLogger(__name__)
 
 
 def save_article(path, metadata, article):
@@ -39,38 +46,44 @@ def crawl_url(path, metadata):
             sys.exit()
             pass
         elif not article.text:
-            print("text")
-            sys.exit()
-            # TODO
-            pass
-        save_article(path, metadata, article)
+            err = "\nFailed to download {}. No body text found.".format(metadata["url"])
+            print(err)
+            logging.exception('Exception: {}'.format(err))
+            return False
+        else:
+            save_article(path, metadata, article)
+            return True
+    except ArticleException as err:
+        print("\nFailed to download {}. URL not found.".format(metadata["url"]))
+        logging.exception('Exception: {}'.format(err))
+        return False
     except Exception as err:
         print(err)
         logging.exception('Exception: {}'.format(err))
+        return False
 
 
 def main():
-    metadata_filepath = "../corpus/mind_metadata.json"
-    corpus_filepath = "../corpus"
-
-    with open(metadata_filepath, encoding='utf-8') as json_file:
+    with open(const.fp_mind_metadata, encoding='utf-8') as json_file:
         mind_metadata = json.load(json_file)
 
-    for entry in mind_metadata[0:6000]:
-        if entry["category"] == "fact":
-            if entry["source"] in ["cmjornal", "dn", "publico", "sicnoticias"]:
-                crawl_url(corpus_filepath, entry)
-            elif entry["source"] == ["expresso", "jn", "jornaldenegocios", "tsf"]:
-                # TODO: Fix body text start. Requires preprocess.
-                pass
-            # elif entry["source"] == "new_source":
-            #     crawl_url(corpus_filepath, entry)
-            elif entry["source"] == ["lusa"]:
-                # TODO: Upload these content directly onto repo.
-                pass
-        else:
-            # TODO: to be implemented...
-            pass
+    print("Downloading Opinion subsets - Starting...")
+    print()
+    crawler_status = {"success": 0, "fail": 0}
+
+    for entry in tqdm(mind_metadata[10800:12000]):
+        if entry["category"] == "opinion":
+            if entry["source"] in ["visao"]:
+                # ["cmjornal", "dn", "expresso", "jn", "jornaldenegocios", "noticiasviriato", "publico", "sicnoticias",
+                # "tsf", "visao"]: pass
+                current_status = crawl_url(const.fp_mind_corpus, entry)
+                if current_status:
+                    crawler_status["success"] += 1
+                else:
+                    crawler_status["fail"] += 1
+    print("Downloading Opinion subsets - Complete (Retrieved {} news articles. Failed {} news articles).".format(
+        crawler_status["success"], crawler_status["fail"]))
+    print()
 
 
 if __name__ == '__main__':
