@@ -67,21 +67,18 @@ def main():
     with open(const.fp_mind_metadata, encoding='utf-8') as json_file:
         mind_metadata = json.load(json_file)
 
-    print("Downloading Opinion subsets - Starting...")
+    print("Downloading subsets - Starting...")
     print()
     crawler_status = {"success": 0, "fail": 0}
 
-    for entry in tqdm(mind_metadata[10800:12000]):
-        if entry["category"] == "opinion":
-            if entry["source"] in ["visao"]:
-                # ["cmjornal", "dn", "expresso", "jn", "jornaldenegocios", "noticiasviriato", "publico", "sicnoticias",
-                # "tsf", "visao"]: pass
-                current_status = crawl_url(const.fp_mind_corpus, entry)
-                if current_status:
-                    crawler_status["success"] += 1
-                else:
-                    crawler_status["fail"] += 1
-    print("Downloading Opinion subsets - Complete (Retrieved {} news articles. Failed {} news articles).".format(
+    for entry in tqdm(mind_metadata[18000:19029]):
+        if entry["source"] in ["inimigopublico"]:
+            current_status = crawl_url(const.fp_mind_corpus, entry)
+            if current_status:
+                crawler_status["success"] += 1
+            else:
+                crawler_status["fail"] += 1
+    print("Downloading subsets - Complete (Retrieved {} news articles. Failed {} news articles).".format(
         crawler_status["success"], crawler_status["fail"]))
     print()
 

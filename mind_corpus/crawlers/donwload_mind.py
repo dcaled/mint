@@ -44,7 +44,7 @@ def main():
     download_subset_newspaper3k("Fact remaining", mind_metadata[0:6000])
     download_subset_newspaper3k("Opinion", mind_metadata[6000:12000])
     # download_subset_newspaper3k("Entertainment", mind_metadata[12000:18000])
-    # download_subset_newspaper3k("Satire", mind_metadata[18000:19029])
+    download_subset_newspaper3k("Satire", mind_metadata[18000:19029])
     # download_subset_newspaper3k("Conspiracy", mind_metadata[19029:])
 
 
