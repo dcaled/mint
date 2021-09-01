@@ -15,6 +15,14 @@ Metadata are available [here](https://github.com/dcaled/mind/blob/master/mind_co
 
 ### Download text 
 
+For convenience, we have provided a script which will download the news articles for you. Please follow the instructions if you would like to use the attached script.
+
+Fork or clone this repository and install required python libraries
+
+$ git clone https://github.com/dcaled/mind.git
+$ cd mind
+$ conda env create --file environment.yml
+
 Under construction...
 
 
