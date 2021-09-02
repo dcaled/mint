@@ -3,6 +3,11 @@ Danielle Caled and Paula Carvalho and Mário J. Silva. 2021. MIND - Mainstream a
 
 Paper: https://arxiv.org/abs/2108.06249
 
+MIND (Mainstream and Independent News Documents) is a corpus composed of 20,278 articles from 33 Portuguese mainstream and independent media, aiming at covering different styles, subjects, and communication purposes.
+The collection period ranges from June 1st, 2020 to March 31st, 2021, representing a full year sample of online content published in Portuguese media.
+The articles are organized into five categories, classified as *facts*, *opinions*, *entertainment*, *satires*, and *conspiracy theories*.
+
+
 We make MIND corpus metadata available in this repository. 
 To allow the access to news articles' headline and body text, we implement a series of scrappers, customized according to the source of the article.
 
