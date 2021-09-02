@@ -42,9 +42,10 @@ def crawl_url(path, metadata):
         article.download()
         article.parse()
         if not article.title.strip():
-            print("title")
-            sys.exit()
-            pass
+            err = "\nFailed to download {}. No headline found.".format(metadata["url"])
+            print(err)
+            logging.exception('Exception: {}'.format(err))
+            return False
         elif not article.text.strip():
             err = "\nFailed to download {}. No body text found.".format(metadata["url"])
             print(err)
@@ -71,8 +72,8 @@ def main():
     print()
     crawler_status = {"success": 0, "fail": 0}
 
-    for entry in tqdm(mind_metadata[15000:18000]):
-        if entry["source"] in ["vidas"]:
+    for entry in tqdm(mind_metadata[19000:]):
+        if entry["source"] in ["resistir"]:
             current_status = crawl_url(const.fp_mind_corpus, entry)
             if current_status:
                 crawler_status["success"] += 1

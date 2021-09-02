@@ -32,7 +32,7 @@ $ cd mind_corpus/crawlers
 $ python donwload_mind.py
 ```
 
-Access the corpus data in ```mind\mind_corpus\corpus```.
+Access the corpus data in ```mind/mind_corpus/corpus```.
 
 ## Disclaimer
 MIND's news articles are downloaded directly from their source URLs through the scrappers provided in this repository. Since source pages are dynamic, their content may not be available or may be updated at the time of download.
