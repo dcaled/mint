@@ -39,6 +39,25 @@ $ python donwload_mind.py
 
 Access the corpus data in ```mind/mind_corpus/corpus```.
 
+## Data structure
+
+Each downloaded article file is a JSON object with the following attributes:
+
+* ```filename``` (**string**): Name, i.e., identifier, of the file containing the article, automatically generated at the time of its creation.
+* ```category``` (**string**): Article's category, labelled as explained in the [paper](https://arxiv.org/abs/2108.06249).
+* ```source``` (**string**): Name of the source which published the article.
+* ```url``` (**string**): Article's URL.
+* ```publish_date``` (**string**): Date and time of publication of the article, in ISO format yyyy-MM-dd HH:mm:ss.
+* ```headline``` (**string**): Article's headline.
+* ```body_text``` (**string**): Article's body text.
+* ```authors``` (**array**): List of authors of the article.
+* ```description``` (**string**): Short text describing or summarizing the content of the article.
+* ```tags``` (**array**): List of article tags assigned by the article's source (e.g., sports, politics).
+* ```top_image``` (**string**): URL of the best image representing the article.
+* ```movies``` (**array**): List of URLs of all the videos in the article web page (e.g., YouTube, Vimeo, etc).
+
+Unavailable attributes are assigned ```[]``` or ```""```, depending on their type. 
+
 ## Disclaimer
 MIND's news articles are downloaded directly from their source URLs through the scrappers provided in this repository. Since source pages are dynamic, their content may not be available or may be updated at the time of download.
 
