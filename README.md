@@ -39,7 +39,11 @@ $ python donwload_mind.py
 
 Access the corpus data in ```mind/mind_corpus/corpus```.
 
-## Data structure
+### Download crowdsourced annotations
+
+Annotations are available [here](https://github.com/dcaled/mind/blob/master/mind_corpus/corpus/mint-annotations.xlxs).
+
+## Data structure of MIND-articles
 
 Each downloaded article file is a JSON object with the following attributes:
 
@@ -57,6 +61,7 @@ Each downloaded article file is a JSON object with the following attributes:
 * ```movies``` (**array**): List of URLs of all the videos in the article web page (e.g., YouTube, Vimeo, etc).
 
 Unavailable attributes are assigned ```[]``` or ```""```, depending on their type. 
+
 
 ## Disclaimer
 MIND's news articles are downloaded directly from their source URLs through the scrappers provided in this repository. Since source pages are dynamic, their content may not be available or may be updated at the time of download.
