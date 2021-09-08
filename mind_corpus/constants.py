@@ -31,6 +31,6 @@ fp_lusa_subset = "../corpus/fact/lusa.zip"
 lusa_subset_google_id = "1NIsxVLqmFKsbVB_ZaekFlE0FZrm21XWp"
 
 fp_logs = "../logs"
-fp_mint_metadata = "../corpus/mint_metadata.json"
+fp_mint_metadata = "../corpus/mint-metadata.json"
 fp_mint_corpus = "../corpus"
 fp_classification_results = "../corpus"
