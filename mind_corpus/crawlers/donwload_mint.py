@@ -14,7 +14,7 @@ def download_subset_newspaper3k(subset_name, subset_articles):
     crawler_status = {"success": 0, "fail": 0}
     for entry in tqdm(subset_articles):
         if entry["source"] != "lusa":
-            current_status = crawl_url(const.fp_mind_corpus, entry)
+            current_status = crawl_url(const.fp_mint_corpus, entry)
             if current_status:
                 crawler_status["success"] += 1
             else:
@@ -38,14 +38,14 @@ def main():
     print("Downloading Lusa subset - Complete.\n")
 
     # Download other subsets.
-    with open(const.fp_mind_metadata, encoding='utf-8') as json_file:
-        mind_metadata = json.load(json_file)
+    with open(const.fp_mint_metadata, encoding='utf-8') as json_file:
+        mint_metadata = json.load(json_file)
 
-    download_subset_newspaper3k("Fact remaining", mind_metadata[0:6000])
-    download_subset_newspaper3k("Opinion", mind_metadata[6000:12000])
-    download_subset_newspaper3k("Entertainment", mind_metadata[12000:18000])
-    download_subset_newspaper3k("Satire", mind_metadata[18000:19029])
-    download_subset_newspaper3k("Conspiracy", mind_metadata[19029:])
+    download_subset_newspaper3k("Fact remaining", mint_metadata[0:6000])
+    download_subset_newspaper3k("Opinion", mint_metadata[6000:12000])
+    download_subset_newspaper3k("Entertainment", mint_metadata[12000:18000])
+    download_subset_newspaper3k("Satire", mint_metadata[18000:19029])
+    download_subset_newspaper3k("Conspiracy", mint_metadata[19029:])
 
 
 if __name__ == '__main__':

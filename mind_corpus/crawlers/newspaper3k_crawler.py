@@ -65,16 +65,16 @@ def crawl_url(path, metadata):
 
 
 def main():
-    with open(const.fp_mind_metadata, encoding='utf-8') as json_file:
-        mind_metadata = json.load(json_file)
+    with open(const.fp_mint_metadata, encoding='utf-8') as json_file:
+        mint_metadata = json.load(json_file)
 
     print("Downloading subsets - Starting...")
     print()
     crawler_status = {"success": 0, "fail": 0}
 
-    for entry in tqdm(mind_metadata[19000:]):
+    for entry in tqdm(mint_metadata[19000:]):
         if entry["source"] in ["resistir"]:
-            current_status = crawl_url(const.fp_mind_corpus, entry)
+            current_status = crawl_url(const.fp_mint_corpus, entry)
             if current_status:
                 crawler_status["success"] += 1
             else:
