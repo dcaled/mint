@@ -42,14 +42,15 @@ Access the corpus data in ```mind/mind_corpus/corpus```.
 ### Download crowdsourced annotations
 
 Annotations are available [here](https://github.com/dcaled/mind/blob/master/mind_corpus/corpus/mint-annotations.xlsx).
-We provide initial insights on the human annotations in [this link](https://github.com/dcaled/mind/blob/master/mind_corpus/understanding_annotations/annotations_analysis.ipynb). 
+
+We provide [preliminary insights](https://github.com/dcaled/mind/blob/master/mind_corpus/understanding_annotations/annotations_analysis.ipynb) on the human annotations. 
 
 ## Data structure of MIND-articles
 
 Each downloaded article file is a JSON object with the following attributes:
 
 * ```filename``` (**string**): Name, i.e., identifier, of the file containing the article, automatically generated at the time of its creation.
-* ```category``` (**string**): Article's category, labelled as explained in the [paper](https://arxiv.org/abs/2108.06249).
+* ```category``` (**string**): Article's category, labeled as explained in the [paper](https://arxiv.org/abs/2108.06249).
 * ```source``` (**string**): Name of the source which published the article.
 * ```url``` (**string**): Article's URL.
 * ```publish_date``` (**string**): Date and time of publication of the article, in ISO format yyyy-MM-dd HH:mm:ss.
