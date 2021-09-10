@@ -44,7 +44,7 @@ def main():
             os.makedirs(path_to_augmented_corpus)
 
         # Save augmented data.
-        filename = "{}/aug_data_{}_p0.1".format(path_to_augmented_corpus, mode)
+        filename = "{}/aug_data_{}_p0.1.json".format(path_to_augmented_corpus, mode)
         with open(filename, "w", encoding='utf-8') as jsonfile:
             json.dump(aug_data, jsonfile, ensure_ascii=False)
 
