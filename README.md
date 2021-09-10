@@ -42,6 +42,7 @@ Access the corpus data in ```mind/mind_corpus/corpus```.
 ### Download crowdsourced annotations
 
 Annotations are available [here](https://github.com/dcaled/mind/blob/master/mind_corpus/corpus/mint-annotations.xlsx).
+We provide initial insights on the human annotations in [this link](https://github.com/dcaled/mind/blob/master/mind_corpus/understanding_annotations/annotations_analysis.ipynb). 
 
 ## Data structure of MIND-articles
 
