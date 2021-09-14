@@ -1,0 +1,35 @@
+=========================================================
+Annotations (How to read mint-annotations.xlsx file)
+=========================================================
+
+This file describes the annotations carried in a sample extracted from the MINT corpus.
+
+The annotation file is organized according to the following:
+
+	- The first two columns are fields filled in automatically, representing the articles' identifier (filename), and its MINT category ("fact", "opinion", "entertainment", "satire", or "conspiracy"):
+
+		- 1; Filename
+		- 2; Category
+
+	- The remaining columns correspond to the questions asked to the annotators, who should rate a MINT article randomly assigned to them. Below we describe the columns in the following format: column, alias, question, scale.
+
+		-  3; Credibility; Indique, numa escala de 1 a 5, quão credível é a notícia que acabou de ler; [1-5]
+		-  4; Accurate headline; Indique, numa escala de 1 a 5, em que medida o título reflete o conteúdo da notícia; [1-5]
+		-  5; Clickbait techniques; Indique, numa escala de 1 a 5, quão "clickbait" é o título da notícia; [1-5] 
+		-  6; Irony in headline; Indique, numa escala de 1 a 5, quão irónico/sarcástico é o título da notícia; [1-5]
+		-  7; Sentiment in headline; Indique, numa escala de 1 a 5, o grau de sentimento/emoção veiculado no título da notícia; [1-5]
+		-  8; Sources of information; A notícia cita fontes de informação?; Sim/Não
+		-  9; Sources credibility; Indique, numa escala de 1 a 5, o grau de credibilidade das fontes citadas na notícia; [1-5]
+		- 10; Linguistic accuracy; Indique, numa escala de 1 a 5, o grau de correção linguística da notícia; 
+		- 11; Subjectivity; O autor da notícia emite algum tipo de opinião?; Sim/Não	
+		- 12; Sentiment intensity; Indique, numa escala de 1 a 5, o grau de sentimento/emoção veiculado na notícia; [1-5]
+		- 13; Irony and sarcasm; A notícia recorre a ironia ou sarcasmo?; Sim/Não 
+		- 14; Sensationalism; Indique, numa escala de 1 a 5, quão sensacionalista é a notícia;  [1-5]
+		- 15; Personal attack; A notícia apresenta, direta ou indiretamente, algum tipo de ataque contra indivíduos ou organizações?; Sim/Não 
+		- 16; Appeal to fear; A notícia recorre ao medo como estratégia de persuasão do leitor?; Sim/Não
+
+	- We also asked annotators to indicate up to three aspects that most negatively influence their perception of the credibility of the articles. The answers are provided as a list in column 17 (column, alias, question):
+
+		- 17; Influencing aspects; Quais dos seguintes aspetos poderão influenciar de forma mais negativa a credibilidade das notícias (selecione, no máximo, 3 opções)?
+
+Note that for questions whose answers follow the likert scale ([1-5]), we also provide the option "Não sei", so that annotators indicate uncertainty or difficulty when answering the questions.
