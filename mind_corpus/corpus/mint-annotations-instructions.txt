@@ -15,7 +15,7 @@ The annotation file is organized according to the following:
 
 		-  3; Credibility; Indique, numa escala de 1 a 5, quão credível é a notícia que acabou de ler; [1-5]
 		-  4; Accurate headline; Indique, numa escala de 1 a 5, em que medida o título reflete o conteúdo da notícia; [1-5]
-		-  5; Clickbait techniques; Indique, numa escala de 1 a 5, quão "clickbait" é o título da notícia; [1-5] 
+		-  5; Clickbait strategies; Indique, numa escala de 1 a 5, quão "clickbait" é o título da notícia; [1-5] 
 		-  6; Irony in headline; Indique, numa escala de 1 a 5, quão irónico/sarcástico é o título da notícia; [1-5]
 		-  7; Sentiment in headline; Indique, numa escala de 1 a 5, o grau de sentimento/emoção veiculado no título da notícia; [1-5]
 		-  8; Sources of information; A notícia cita fontes de informação?; Sim/Não
