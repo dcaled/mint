@@ -25,7 +25,7 @@ def load_from_path(subset_path):
             # Load json file.
             filepath = '{}/{}/{}'.format(subset_path, source, filename)
             data = load_article(filepath)
-            article = PreprocessedArticle(headline=data["title"], body=data['text'])
+            article = PreprocessedArticle(headline=data["headline"], body=data['body_text'])
             subset += [article]
     return subset
 
