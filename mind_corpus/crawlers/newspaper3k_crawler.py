@@ -20,7 +20,7 @@ def save_article(path, metadata, article):
         source=metadata["source"],
         url=metadata["url"],
         publish_date=metadata["publish_date"],
-        headline=article.title.strip(),
+        headline=metadata["headline"],
         body_text=article.text.strip(),
         authors=metadata["authors"],
         description=metadata["description"],
@@ -41,12 +41,7 @@ def crawl_url(path, metadata):
         article = Article(metadata["url"], config=n3k_config)
         article.download()
         article.parse()
-        if not article.title.strip():
-            err = "\nFailed to download {}. No headline found.".format(metadata["url"])
-            print(err)
-            logging.exception('Exception: {}'.format(err))
-            return False
-        elif not article.text.strip():
+        if not article.text.strip():
             err = "\nFailed to download {}. No body text found.".format(metadata["url"])
             print(err)
             logging.exception('Exception: {}'.format(err))
