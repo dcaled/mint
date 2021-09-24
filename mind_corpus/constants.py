@@ -27,7 +27,7 @@ fp_lex_sent = '{}processed/sentiment.pkl'.format(base_dir)
 # fp_lex_subj = '{}processed\\subjectivity.pkl'.format(base_dir)
 
 # MINT Corpus - Lusa subset
-fp_lusa_subset = "../corpus/fact/lusa.zip"
+fp_lusa_subset = "../corpus/hard news/lusa.zip"
 lusa_subset_google_id = "1NIsxVLqmFKsbVB_ZaekFlE0FZrm21XWp"
 
 fp_logs = "../logs"

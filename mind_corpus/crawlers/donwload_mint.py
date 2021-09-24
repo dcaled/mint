@@ -41,9 +41,9 @@ def main():
     with open(const.fp_mint_metadata, encoding='utf-8') as json_file:
         mint_metadata = json.load(json_file)
 
-    download_subset_newspaper3k("Fact remaining", mint_metadata[0:6000])
+    download_subset_newspaper3k("Hard news", mint_metadata[0:6000])
     download_subset_newspaper3k("Opinion", mint_metadata[6000:12000])
-    download_subset_newspaper3k("Entertainment", mint_metadata[12000:18000])
+    download_subset_newspaper3k("Soft news", mint_metadata[12000:18000])
     download_subset_newspaper3k("Satire", mint_metadata[18000:19029])
     download_subset_newspaper3k("Conspiracy", mint_metadata[19029:])
 
