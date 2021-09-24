@@ -6,7 +6,7 @@ This file describes the annotations carried in a sample extracted from the MINT 
 
 The annotation file is organized according to the following:
 
-	- The first two columns are fields filled in automatically, representing the articles' identifier (filename), and its MINT category ("fact", "opinion", "entertainment", "satire", or "conspiracy"):
+	- The first two columns are fields filled in automatically, representing the articles' identifier (filename), and its MINT category ("hard news", "opinion", "soft news", "satire", or "conspiracy"):
 
 		- 1; Filename
 		- 2; Category
