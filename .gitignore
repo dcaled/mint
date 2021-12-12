@@ -138,8 +138,10 @@ dmypy.json
 cython_debug/
 
 # Corpus files
-/mint_corpus/corpus*/fact
+/mint_corpus/corpus*/hard news
 /mint_corpus/corpus*/opinion
-/mint_corpus/corpus*/entertainment
+/mint_corpus/corpus*/soft news
 /mint_corpus/corpus*/satire
 /mint_corpus/corpus*/conspiracy
+/mint_corpus/corpus*/old
+/mint_corpus/corpus_original_v2/*
