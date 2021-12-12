@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
-from mind_corpus import constants
+from mint_corpus import constants
 from preprocessed_article import PreprocessedArticle
 from sentiment_metric import SentimentMetric
 

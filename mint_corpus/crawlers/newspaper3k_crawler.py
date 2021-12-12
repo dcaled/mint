@@ -1,10 +1,9 @@
 import json
 import logging
-import sys
 from tqdm import tqdm
 
 from newspaper import Article, Config, ArticleException
-import mind_corpus.constants as const
+import mint_corpus.constants as const
 from crawled_article import CrawledArticle
 
 log_path = '{}/newspaper3k.log'.format(const.fp_logs)

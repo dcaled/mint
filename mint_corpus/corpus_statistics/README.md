@@ -1,4 +1,4 @@
-# MIND Corpus Statistics
+# MINT Corpus Statistics
 
 ## Sentiment Metrics
 

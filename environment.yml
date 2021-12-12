@@ -1,4 +1,4 @@
-name: mind
+name: mint
 channels:
   - conda-forge
   - defaults

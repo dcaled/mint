@@ -3,8 +3,8 @@ import os
 from tqdm import tqdm
 from google_drive_downloader import GoogleDriveDownloader as gdd
 
-import mind_corpus.constants as const
-from mind_corpus.crawlers.newspaper3k_crawler import crawl_url
+import mint_corpus.constants as const
+from mint_corpus.crawlers.newspaper3k_crawler import crawl_url
 
 
 def download_subset_newspaper3k(subset_name, subset_articles):

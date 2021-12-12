@@ -1,12 +1,11 @@
 import os
 import pickle
-import sys
 
 from scipy import sparse
 from sklearn.model_selection import GridSearchCV, PredefinedSplit
 
-import mind_corpus.classification.load_data as load
-from mind_corpus.classification.shallow_classification.classification_report import ClassificationReport
+import mint_corpus.classification.load_data as load
+from mint_corpus.classification.shallow_classification.classification_report import ClassificationReport
 from estimators_params import random_forest, svc, logistic_regression
 import preprocess
 

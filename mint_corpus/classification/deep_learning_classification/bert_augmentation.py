@@ -2,7 +2,7 @@ import json
 import os
 
 from tqdm import tqdm
-import mind_corpus.classification.load_data as load
+import mint_corpus.classification.load_data as load
 
 import nlpaug.augmenter.word as naw
 
