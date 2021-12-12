@@ -1,5 +1,5 @@
 # MINT Corpus
-Danielle Caled and Paula Carvalho and Mário J. Silva. 2021. MINT - Mainstream and Independent News Text Corpus
+Danielle Caled and Paula Carvalho and Mário J. Silva. 2021. MINT - Mainstream and Independent News Text Corpus.  In Proceedings of the International Conference on Computational Processing of Portuguese, 2022.
 
 Paper: https://arxiv.org/abs/2108.06249
 
@@ -16,7 +16,7 @@ To allow the access to news articles' headline and body text, we implement a ser
 
 ### Download metadata
 
-Metadata are available [here](https://github.com/dcaled/mint/blob/master/mint_corpus/corpus/mint_metadata.json).
+Metadata are available [here](https://github.com/dcaled/mint/blob/master/mint_corpus/corpus/mint-metadata.json).
 
 ### Download text 
 
